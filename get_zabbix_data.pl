@@ -1,16 +1,40 @@
 #!/usr/bin/perl
+# Last Modified: 2010/12/18
+# Author: Seiichiro, Ishida <twitterID: @sechiro>
+
 use strict;
 use warnings;
 use Socket;
 use JSON;
+use Getopt::Long;
+
+# JSON OO Interface
 my $json = JSON->new->allow_nonref;
 
+# Command Line Options
 my $zabbix_server = "localhost";
-my $user = "Admin";
-my $password = "zabbix";
+my $user = "Admin"; # Zabbix default
+my $password = "zabbix"; # Zabbix default
 my $useragent = "zabbi-tan";
+my $method;
+my $limit = 10; # 一度に取得するアイテム数
+my $filter; # ex)   --method host.get --filter '{"host":"Zabbix server"}'
+            #       --method item.get --filter '{"hostid":["10001","10017"],"description":"Buffers memory"}'
+my $opt_parse = GetOptions (
+    "zabbix_server=s" => \$zabbix_server,
+    "user=s"        =>  \$user,
+    "password=s"    =>  \$password,
+    "useragent=s"   =>  \$useragent,
+    "method=s"      =>  \$method,
+    "limit=i"       =>  \$limit,
+    "filter=s"      =>  \$filter,
+);
 
-# Auth
+
+die "No method specified!" unless ( defined($method) );
+my $filter_hash = $json->decode( $filter ) if ( defined($filter) );
+
+# Authentication
 my $json_auth = $json->encode( create_auth_request_hash($user, $password) );
 my $rpc_auth_request = create_rpc_request($zabbix_server, $useragent, $json_auth);
 my $json_auth_result = $json->decode( get_zabbix_data($zabbix_server, $rpc_auth_request) );
@@ -19,40 +43,32 @@ my $id = $json_auth_result->{id};
 $id++;
 
 # Get Zabbix Data
-my $method = 'host.get'; 
-
-my $json_data = $json->encode( create_get_request_hash($auth, $id, $method) );
+my $json_data = $json->encode( create_get_request_hash($auth, $id, $method, $filter_hash, $limit) );
+$json_data =~ s/\\//g;
+$json_data =~ s/\"\{/\{/g;
+$json_data =~ s/\}\"/\}/g; # JSONをParseする途中で入った余計な\や"を取り除く
 my $rpc_request = create_rpc_request($zabbix_server, $useragent, $json_data);
 my $json_result = $json->decode( get_zabbix_data($zabbix_server, $rpc_request) );
 
-# test output
+# output
 my $pretty_printed = $json->pretty->encode( $json_result );
 print $pretty_printed;
 
-# host test
-my $host_array = $json_result->{result};
-foreach my $host_result ( @$host_array ) { # $json_result->{result}[0]->{host}
-    if ( $host_result->{host} eq "RecordingServer" ) {
-        print "Host: $host_result->{host}\n";
-        print "HostID: $host_result->{hostid}\n";
-    }
-}
 exit;
-
 
 sub create_auth_request_hash{
     my $user = shift;
     my $password = shift;
     
     my %params = (
-        user    =>  $user,
+        user        =>  $user,
         password    =>  $password,
     );
     my %auth_request = (
         auth        =>  undef,
         method      =>  'user.authenticate',
         id          =>  0,
-        params       =>  \%params,
+        params      =>  \%params,
         jsonrpc     =>  '2.0',
     );
     return \%auth_request;
@@ -62,18 +78,20 @@ sub create_get_request_hash{ #for host.get etc.
     my $auth = shift;
     my $id = shift;
     my $method = shift;
+    my $filter_hash = shift;
     my $limit = shift;
-    $limit = 100 unless defined($limit);
     
     my %params = (
-        extendoutput    =>  'true',
-        limit           =>  $limit,
+        output      =>  'extend',
+        limit       =>  $limit,
+        filter      =>  $filter,
     );
+
     my %get_request = (
         auth        =>  $auth,
         method      =>  $method,
         id          =>  $id,
-        params       =>  \%params,
+        params      =>  \%params,
         jsonrpc     =>  '2.0',
     );
     return \%get_request;
@@ -101,7 +119,7 @@ sub get_zabbix_data{
     my $rpc_request = shift;
     
     my $sock;
-    socket( $sock, PF_INET, SOCK_STREAM, getprotobyname('tcp' ) )
+    socket( $sock, PF_INET, SOCK_STREAM, getprotobyname('tcp') )
         or die "Cannot create socket: $!";
     my $packed_remote_host = inet_aton( $zabbix_server )
     or die "Cannot pack $zabbix_server: $!";

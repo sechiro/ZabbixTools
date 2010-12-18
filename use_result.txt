@@ -1,0 +1,8 @@
+# host test
+my $host_array = $json_result->{result};
+foreach my $host_result ( @$host_array ) { # $json_result->{result}[n]->{host}
+    if ( $host_result->{host} eq "RecordingServer" ) {
+        print "Host: $host_result->{host}\n";
+        print "HostID: $host_result->{hostid}\n";
+    }
+}
