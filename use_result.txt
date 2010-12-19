@@ -1,8 +1,14 @@
 # host test
-my $host_array = $json_result->{result};
-foreach my $host_result ( @$host_array ) { # $json_result->{result}[n]->{host}
-    if ( $host_result->{host} eq "RecordingServer" ) {
+my $result_array = $json_result->{result};
+foreach my $result ( @$result_array ) { # $json_result->{result}[n]->{groupid}
+    if ( $result->{name} eq $group ) {
         print "Host: $host_result->{host}\n";
         print "HostID: $host_result->{hostid}\n";
     }
+}
+
+# host test
+my $result_array = $json_result->{result};
+foreach my $result ( @$result_array ) { # $json_result->{result}[n]->{groupid}
+    push (@hostgroup_ids, $result->{groupid});
 }

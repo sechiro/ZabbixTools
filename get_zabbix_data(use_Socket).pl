@@ -4,7 +4,7 @@
 
 use strict;
 use warnings;
-use IO::Socket::INET;
+use Socket;
 use JSON;
 use Getopt::Long;
 
@@ -44,6 +44,9 @@ $id++;
 
 # Get Zabbix Data
 my $json_data = $json->encode( create_get_request_hash($auth, $id, $method, $filter_hash, $limit) );
+$json_data =~ s/\\//g;
+$json_data =~ s/\"\{/\{/g;
+$json_data =~ s/\}\"/\}/g; # JSONをParseする途中で入った余計な\や"を取り除く
 my $rpc_request = create_rpc_request($zabbix_server, $useragent, $json_data);
 my $json_result = $json->decode( get_zabbix_data($zabbix_server, $rpc_request) );
 
@@ -111,24 +114,43 @@ sub create_rpc_request{
 }
 
 sub get_zabbix_data{
-    use IO::Socket::INET;
+    use Socket;
     my $zabbix_server = shift;
     my $rpc_request = shift;
     
-    my $sock = IO::Socket::INET->new(PeerAddr => "$zabbix_server",
-                                     PeerPort => 'http(80)',
-                                     Proto    => 'tcp',
-        ) or die "Cannot create socket: $!";
+    my $sock;
+    socket( $sock, PF_INET, SOCK_STREAM, getprotobyname('tcp') )
+        or die "Cannot create socket: $!";
+    my $packed_remote_host = inet_aton( $zabbix_server )
+    or die "Cannot pack $zabbix_server: $!";
 
-    $sock->print("$rpc_request");
+    my $remote_port = 80; 
+
+    # ホスト名とポート番号をパック
+    my $sock_addr = sockaddr_in( $remote_port, $packed_remote_host )
+        or die "Cannot pack $zabbix_server:$remote_port: $!";
+
+    connect( $sock, $sock_addr )
+        or die "Cannot connect $zabbix_server:$remote_port: $!";
+
+    # 書き込みバッファリングをしない。
+    my $old_handle = select $sock;
+    $| = 1; 
+    select $old_handle;
+
+    print $sock "$rpc_request";
+    
+    shutdown $sock, 1; # 書き込みを終了する。
+
     
     # データの読み込み
     my $json_result;
-    while( my $line = $sock->getline ){
+    while( my $line = <$sock> ){
         if ( $line =~ /jsonrpc/ ){
             $json_result = $line;
         }
     }
+    close $sock;
     return $json_result;
 }
 
