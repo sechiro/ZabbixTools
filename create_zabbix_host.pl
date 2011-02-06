@@ -1,5 +1,6 @@
 #!/usr/bin/perl
-# Last Modified: 2010/12/19
+# First Version 2010/12/19
+# Last Modified: 2011/02/06
 # Author: Seiichiro, Ishida <twitterID: @sechiro>
 
 use strict;
@@ -24,6 +25,7 @@ my $agentport = 10050;
 my @hostgroups = ();
 my @templates = ();
 my $useip = 1;
+my $ipmi_privilege = 1; # バグ回避のため追加。
 my $limit; # 取得アイテム数の上限。サブルーチンの互換性向けに定義。
 
 my $opt_parse = GetOptions (
@@ -40,6 +42,7 @@ my $opt_parse = GetOptions (
     "templates=s"   =>  \@templates,
     "useip=i"       =>  \$useip,
     "limit=i"       =>  \$limit,
+    "ipmi_privilege=i" => \$ipmi_privilege,
 );
 
 die "Hostname is needed!" unless (defined($hostname));
@@ -85,7 +88,7 @@ foreach my $template (@templates) {
 }
 
 # Create Host
-my $json_data = $json->encode( host_create_request_hash($auth, $id, $method, $hostname, $ip, $dnsname, $agentport, \@hostgroup_ids, \@template_ids, $useip) );
+my $json_data = $json->encode( host_create_request_hash($auth, $id, $method, $hostname, $ip, $dnsname, $agentport, \@hostgroup_ids, \@template_ids, $useip, $ipmi_privilege) );
 my $rpc_request = create_rpc_request($zabbix_server, $useragent, $json_data);
 my $json_result = $json->decode( get_zabbix_data($zabbix_server, $rpc_request) );
 $id++;
@@ -151,6 +154,7 @@ sub host_create_request_hash{ #for host.create
     my $hostgroup_ids = shift;
     my $template_ids = shift;
     my $useip = shift;
+    my $ipmi_privilege = shift;
     
     my %params = (
         host        =>  $hostname,
@@ -160,6 +164,7 @@ sub host_create_request_hash{ #for host.create
         groups      =>  $hostgroup_ids, 
         templates   =>  $template_ids, 
         useip       =>  $useip,
+        ipmi_privilege => $ipmi_privilege,
     );
 
     my %request = (
