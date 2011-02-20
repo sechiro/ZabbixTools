@@ -16,7 +16,7 @@ my $json = JSON->new->allow_nonref;
 my $zabbix_server = "localhost";
 my $user = "Admin"; # Zabbix default
 my $password = "zabbix"; # Zabbix default
-my $useragent = "zabbi-tan"; # ‚Å‚«‚éŽq
+my $useragent = "zabbi-tan"; # ã§ãã‚‹å­
 my $method = "host.create";
 my $hostname;
 my $ip;
@@ -25,8 +25,8 @@ my $agentport = 10050;
 my @hostgroups = ();
 my @templates = ();
 my $useip = 1;
-my $ipmi_privilege = 1; # ƒoƒO‰ñ”ð‚Ì‚½‚ß’Ç‰ÁB
-my $limit; # Žæ“¾ƒAƒCƒeƒ€”‚ÌãŒÀBƒTƒuƒ‹[ƒ`ƒ“‚ÌŒÝŠ·«Œü‚¯‚É’è‹`B
+my $ipmi_privilege = 1; # ãƒã‚°å›žé¿ã®ãŸã‚è¿½åŠ ã€‚
+my $limit; # å–å¾—ã‚¢ã‚¤ãƒ†ãƒ æ•°ã®ä¸Šé™ã€‚ã‚µãƒ–ãƒ«ãƒ¼ãƒãƒ³ã®äº’æ›æ€§å‘ã‘ã«å®šç¾©ã€‚
 
 my $opt_parse = GetOptions (
     "zabbix_server=s" => \$zabbix_server,
@@ -81,7 +81,7 @@ foreach my $template (@templates) {
     my $rpc_request = create_rpc_request($zabbix_server, $useragent, $json_data);
     my $json_result = $json->decode( get_zabbix_data($zabbix_server, $rpc_request) );
     my $result_hash = $json_result->{result};
-    foreach my $key ( keys %$result_hash ) { # key‚Ì’l‚Ítemplateid‚Æ“¯‚¶B
+    foreach my $key ( keys %$result_hash ) { # keyã®å€¤ã¯templateidã¨åŒã˜ã€‚
         push (@template_ids, $result_hash->{$key}->{templateid});
     }
     $id++;
@@ -205,7 +205,7 @@ sub get_zabbix_data{
 
     $sock->print("$rpc_request");
     
-    # ƒf[ƒ^‚Ì“Ç‚Ýž‚Ý
+    # ãƒ‡ãƒ¼ã‚¿ã®èª­ã¿è¾¼ã¿
     my $json_result;
     while( my $line = $sock->getline ){
         if ( $line =~ /jsonrpc/ ){

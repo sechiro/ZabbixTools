@@ -17,7 +17,7 @@ my $user = "Admin"; # Zabbix default
 my $password = "zabbix"; # Zabbix default
 my $useragent = "zabbi-tan";
 my $method;
-my $limit = 10; # 一度に取得するアイテム数
+my $limit = 10; # 荳蠎ｦ縺ｫ蜿門ｾ励☆繧九い繧､繝�繝謨ｰ
 my $filter; # ex)   --method host.get --filter '{"host":"Zabbix server"}'
             #       --method item.get --filter '{"hostid":["10001","10017"],"description":"Buffers memory"}'
 my $opt_parse = GetOptions (
@@ -122,7 +122,7 @@ sub get_zabbix_data{
 
     $sock->print("$rpc_request");
     
-    # データの読み込み
+    # 繝�繝ｼ繧ｿ縺ｮ隱ｭ縺ｿ霎ｼ縺ｿ
     my $json_result;
     while( my $line = $sock->getline ){
         if ( $line =~ /jsonrpc/ ){
