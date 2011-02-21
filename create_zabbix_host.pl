@@ -1,6 +1,6 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 # First Version 2010/12/19
-# Last Modified: 2011/02/06
+# Last Modified: 2011/02/11
 # Author: Seiichiro, Ishida <twitterID: @sechiro>
 
 use strict;
@@ -26,6 +26,7 @@ my @hostgroups = ();
 my @templates = ();
 my $useip = 1;
 my $ipmi_privilege = 1; # バグ回避のため追加。
+my $proxy_hostid = 0;
 my $limit; # 取得アイテム数の上限。サブルーチンの互換性向けに定義。
 
 my $opt_parse = GetOptions (
@@ -43,6 +44,7 @@ my $opt_parse = GetOptions (
     "useip=i"       =>  \$useip,
     "limit=i"       =>  \$limit,
     "ipmi_privilege=i" => \$ipmi_privilege,
+    "proxy_hostid=s"  => \$proxy_hostid,
 );
 
 die "Hostname is needed!" unless (defined($hostname));
@@ -81,14 +83,27 @@ foreach my $template (@templates) {
     my $rpc_request = create_rpc_request($zabbix_server, $useragent, $json_data);
     my $json_result = $json->decode( get_zabbix_data($zabbix_server, $rpc_request) );
     my $result_hash = $json_result->{result};
-    foreach my $key ( keys %$result_hash ) { # keyの値はtemplateidと同じ。
-        push (@template_ids, $result_hash->{$key}->{templateid});
+    
+    eval {
+        foreach my $result ( @$result_hash ) {
+            print "Server Version: Zabbix 1.8.4\n";
+            push (@template_ids, $result);
+            #print $result->{templateid};
+        }
+    };
+    if ($@) { # リストでの取得に失敗したら、1.8.3だと見做してハッシュで取得。
+        die "Can not parse templateid! This script is only for Zabbix 1.8.3 or 1.8.4." unless ( $@ =~ /Not an ARRAY reference/ );
+        print "Server Version: Zabbix 1.8.3\n";
+        foreach my $key ( keys %$result_hash ) { # keyの値はtemplateidと同じ。
+            push (@template_ids, $result_hash->{$key}->{templateid});
+        }
     }
     $id++;
 }
 
 # Create Host
-my $json_data = $json->encode( host_create_request_hash($auth, $id, $method, $hostname, $ip, $dnsname, $agentport, \@hostgroup_ids, \@template_ids, $useip, $ipmi_privilege) );
+my $json_data = $json->encode( host_create_request_hash($auth, $id, $method, $hostname, $ip, $dnsname, 
+                                $agentport, \@hostgroup_ids, \@template_ids, $useip, $ipmi_privilege, $proxy_hostid) );
 my $rpc_request = create_rpc_request($zabbix_server, $useragent, $json_data);
 my $json_result = $json->decode( get_zabbix_data($zabbix_server, $rpc_request) );
 $id++;
@@ -155,6 +170,7 @@ sub host_create_request_hash{ #for host.create
     my $template_ids = shift;
     my $useip = shift;
     my $ipmi_privilege = shift;
+    my $proxy_hostid = shift;
     
     my %params = (
         host        =>  $hostname,
@@ -165,6 +181,7 @@ sub host_create_request_hash{ #for host.create
         templates   =>  $template_ids, 
         useip       =>  $useip,
         ipmi_privilege => $ipmi_privilege,
+        proxy_hostid => $proxy_hostid,
     );
 
     my %request = (
