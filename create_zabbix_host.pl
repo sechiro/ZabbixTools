@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 # First Version 2010/12/19
 # Last Modified: 2011/02/21
+#    Add Zabbix 1.8.4 Support, proxy_hostid option.
 # Author: Seiichiro, Ishida <twitterID: @sechiro>
 
 use strict;
