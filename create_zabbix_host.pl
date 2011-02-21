@@ -45,7 +45,7 @@ my $opt_parse = GetOptions (
     "useip=i"       =>  \$useip,
     "limit=i"       =>  \$limit,
     "ipmi_privilege=i" => \$ipmi_privilege,
-    "proxy_hostid=s"  => \$proxy_hostid,
+    "proxy_hostid=i"  => \$proxy_hostid,
 );
 
 die "Hostname is needed!" unless (defined($hostname));
