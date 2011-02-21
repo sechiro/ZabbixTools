@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 # First Version 2010/12/19
-# Last Modified: 2011/02/11
+# Last Modified: 2011/02/21
 # Author: Seiichiro, Ishida <twitterID: @sechiro>
 
 use strict;
@@ -75,6 +75,7 @@ foreach my $hostgroup (@hostgroups) {
 
 # Get templates id
 my @template_ids = ();
+my $is_first_template;
 foreach my $template (@templates) {
     my %template_filter = (
         host    =>  $template,
@@ -85,18 +86,25 @@ foreach my $template (@templates) {
     my $result_hash = $json_result->{result};
     
     eval {
-        foreach my $result ( @$result_hash ) {
+        unless ( defined($is_first_template) ) {
             print "Server Version: Zabbix 1.8.4\n";
+            $is_first_template = 1;
+        }
+        foreach my $result ( @$result_hash ) {
             push (@template_ids, $result);
             #print $result->{templateid};
         }
     };
     if ($@) { # リストでの取得に失敗したら、1.8.3だと見做してハッシュで取得。
         die "Can not parse templateid! This script is only for Zabbix 1.8.3 or 1.8.4." unless ( $@ =~ /Not an ARRAY reference/ );
-        print "Server Version: Zabbix 1.8.3\n";
+        unless ( defined($is_first_template) ) {
+            print "Server Version: Zabbix 1.8.3\n";
+            $is_first_template = 1;
+        }
         foreach my $key ( keys %$result_hash ) { # keyの値はtemplateidと同じ。
             push (@template_ids, $result_hash->{$key}->{templateid});
         }
+        
     }
     $id++;
 }
