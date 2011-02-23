@@ -71,18 +71,18 @@ function getAuth(user, password) {
         dataType: 'json',
         type: 'POST',
         processData: false,
-        async: false, // ”FØ‚ªI‚í‚ç‚È‚¢‚ÆŸ‚Ìˆ—‚ª‚Å‚«‚È‚¢‚Ì‚ÅA‚±‚±‚Í“¯Šú’ÊM‚ÉB
+        async: false, // èªè¨¼ãŒçµ‚ã‚ã‚‰ãªã„ã¨æ¬¡ã®å‡¦ç†ãŒã§ããªã„ã®ã§ã€ã“ã“ã¯åŒæœŸé€šä¿¡ã«ã€‚
         data: authJsonRequest,
         success: function(response){
             authResult = response;
         },
         error: function(){ alert("failed"); },
     });
-    return(authResult); // ”FØŒ‹‰Ê‚ğObject‚Æ‚µ‚Ä•Ô‚µ‚Ä"auth.id", "auth.result"‚Åæ‚èo‚·B
+    return(authResult); // èªè¨¼çµæœã‚’Objectã¨ã—ã¦è¿”ã—ã¦"auth.id", "auth.result"ã§å–ã‚Šå‡ºã™ã€‚
 }
 
 // Access Zabbix API and Get Data
-function getZabbixData(rpcid, authid, method, params) { // "params"‚ÍJSONŒ`®‚Ì•¶š—ñƒŠƒeƒ‰ƒ‹‚©JSON‚É•ÏŠ·‰Â”\‚ÈƒIƒuƒWƒFƒNƒg
+function getZabbixData(rpcid, authid, method, params) { // "params"ã¯JSONå½¢å¼ã®æ–‡å­—åˆ—ãƒªãƒ†ãƒ©ãƒ«ã‹JSONã«å¤‰æ›å¯èƒ½ãªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
     var dataRequest = new Object();
         dataRequest.params = params;
         dataRequest.auth = authid;
