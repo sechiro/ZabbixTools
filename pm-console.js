@@ -20,7 +20,7 @@ function main(method){
         descriptions[7] = "Number of running processes heartbeat crmd";
         descriptions[8] = "Number of running processes heartbeat lrmd";
         descriptions[9] = "Number of running processes heartbeat stonithd";
-        descriptions[9] = "Number of running processes heartbeat pengine";
+        descriptions[10] = "Number of running processes heartbeat pengine";
 
     var lastvalues = new Array();
     var objResult = new Object();
