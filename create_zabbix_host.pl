@@ -87,25 +87,24 @@ foreach my $template (@templates) {
     my $result_hash = $json_result->{result};
     
     eval {
-        unless ( defined($is_first_template) ) {
-            print "Server Version: Zabbix 1.8.4\n";
-            $is_first_template = 1;
-        }
         foreach my $result ( @$result_hash ) {
             push (@template_ids, $result);
             #print $result->{templateid};
         }
+        unless ( defined($is_first_template) ) {
+            print "Server Version: Zabbix 1.8.4\n";
+            $is_first_template = 1;
+        }
     };
     if ($@) { # リストでの取得に失敗したら、1.8.3だと見做してハッシュで取得。
         die "Can not parse templateid! This script is only for Zabbix 1.8.3 or 1.8.4." unless ( $@ =~ /Not an ARRAY reference/ );
+        foreach my $key ( keys %$result_hash ) { # keyの値はtemplateidと同じ。
+            push (@template_ids, $result_hash->{$key}->{templateid});
+        }
         unless ( defined($is_first_template) ) {
             print "Server Version: Zabbix 1.8.3\n";
             $is_first_template = 1;
         }
-        foreach my $key ( keys %$result_hash ) { # keyの値はtemplateidと同じ。
-            push (@template_ids, $result_hash->{$key}->{templateid});
-        }
-        
     }
     $id++;
 }
