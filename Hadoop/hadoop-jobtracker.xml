@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="11.06.30" time="22.35">
+  <hosts>
+    <host name="Hadoop_JobTracker">
+      <proxy_hostid>0</proxy_hostid>
+      <useip>1</useip>
+      <dns></dns>
+      <ip>127.0.0.1</ip>
+      <port>10050</port>
+      <status>3</status>
+      <useipmi>0</useipmi>
+      <ipmi_ip>127.0.0.1</ipmi_ip>
+      <ipmi_port>623</ipmi_port>
+      <ipmi_authtype>0</ipmi_authtype>
+      <ipmi_privilege>2</ipmi_privilege>
+      <ipmi_username></ipmi_username>
+      <ipmi_password></ipmi_password>
+      <groups>
+        <group>Templates</group>
+      </groups>
+      <triggers/>
+      <items>
+
+<item type="2" key="jvm.metrics.gcCount[JobTracker]" value_type="0">
+<description>jvm.metrics.gcCount[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.gcTimeMillis[JobTracker]" value_type="0">
+<description>jvm.metrics.gcTimeMillis[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logError[JobTracker]" value_type="0">
+<description>jvm.metrics.logError[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logFatal[JobTracker]" value_type="0">
+<description>jvm.metrics.logFatal[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logInfo[JobTracker]" value_type="0">
+<description>jvm.metrics.logInfo[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logWarn[JobTracker]" value_type="0">
+<description>jvm.metrics.logWarn[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.maxMemoryM[JobTracker]" value_type="0">
+<description>jvm.metrics.maxMemoryM[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapCommittedM[JobTracker]" value_type="0">
+<description>jvm.metrics.memHeapCommittedM[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapUsedM[JobTracker]" value_type="0">
+<description>jvm.metrics.memHeapUsedM[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapCommittedM[JobTracker]" value_type="0">
+<description>jvm.metrics.memNonHeapCommittedM[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapUsedM[JobTracker]" value_type="0">
+<description>jvm.metrics.memNonHeapUsedM[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsBlocked[JobTracker]" value_type="0">
+<description>jvm.metrics.threadsBlocked[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsNew[JobTracker]" value_type="0">
+<description>jvm.metrics.threadsNew[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsRunnable[JobTracker]" value_type="0">
+<description>jvm.metrics.threadsRunnable[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTerminated[JobTracker]" value_type="0">
+<description>jvm.metrics.threadsTerminated[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTimedWaiting[JobTracker]" value_type="0">
+<description>jvm.metrics.threadsTimedWaiting[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsWaiting[JobTracker]" value_type="0">
+<description>jvm.metrics.threadsWaiting[JobTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.blacklisted_maps" value_type="0">
+<description>mapred.jobtracker.blacklisted_maps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.blacklisted_reduces" value_type="0">
+<description>mapred.jobtracker.blacklisted_reduces</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.heartbeats" value_type="0">
+<description>mapred.jobtracker.heartbeats</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.jobs_completed" value_type="0">
+<description>mapred.jobtracker.jobs_completed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.jobs_failed" value_type="0">
+<description>mapred.jobtracker.jobs_failed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.jobs_killed" value_type="0">
+<description>mapred.jobtracker.jobs_killed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.jobs_preparing" value_type="0">
+<description>mapred.jobtracker.jobs_preparing</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.jobs_running" value_type="0">
+<description>mapred.jobtracker.jobs_running</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.jobs_submitted" value_type="0">
+<description>mapred.jobtracker.jobs_submitted</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.map_slots" value_type="0">
+<description>mapred.jobtracker.map_slots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.maps_completed" value_type="0">
+<description>mapred.jobtracker.maps_completed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.maps_failed" value_type="0">
+<description>mapred.jobtracker.maps_failed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.maps_killed" value_type="0">
+<description>mapred.jobtracker.maps_killed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.maps_launched" value_type="0">
+<description>mapred.jobtracker.maps_launched</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.occupied_map_slots" value_type="0">
+<description>mapred.jobtracker.occupied_map_slots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.occupied_reduce_slots" value_type="0">
+<description>mapred.jobtracker.occupied_reduce_slots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.reduce_slots" value_type="0">
+<description>mapred.jobtracker.reduce_slots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.reduces_completed" value_type="0">
+<description>mapred.jobtracker.reduces_completed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.reduces_failed" value_type="0">
+<description>mapred.jobtracker.reduces_failed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.reduces_killed" value_type="0">
+<description>mapred.jobtracker.reduces_killed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.reduces_launched" value_type="0">
+<description>mapred.jobtracker.reduces_launched</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.reserved_map_slots" value_type="0">
+<description>mapred.jobtracker.reserved_map_slots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.reserved_reduce_slots" value_type="0">
+<description>mapred.jobtracker.reserved_reduce_slots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.running_maps" value_type="0">
+<description>mapred.jobtracker.running_maps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.running_reduces" value_type="0">
+<description>mapred.jobtracker.running_reduces</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.trackers" value_type="0">
+<description>mapred.jobtracker.trackers</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.trackers_blacklisted" value_type="0">
+<description>mapred.jobtracker.trackers_blacklisted</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.trackers_decommissioned" value_type="0">
+<description>mapred.jobtracker.trackers_decommissioned</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.waiting_maps" value_type="0">
+<description>mapred.jobtracker.waiting_maps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.jobtracker.waiting_reduces" value_type="0">
+<description>mapred.jobtracker.waiting_reduces</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopJobTracker</application>
+</applications>
+</item>
+<item type="10" key="get_hadoop_metrics.sh[{$JOBTRACKER.PORT} JobTracker]" value_type="1">
+          <description>Hadoopメトリクス取得結果</description>
+          <ipmi_sensor></ipmi_sensor>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <status>0</status>
+          <data_type>0</data_type>
+          <applications>
+            <application>HadoopJobTracker</application>
+          </applications>
+        </item>
+</items>
+      <templates/>
+      <graphs/>
+      <macros>
+        <macro>
+          <value>50030</value>
+          <name>{$JOBTRACKER.PORT}</name>
+        </macro>
+      </macros>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>

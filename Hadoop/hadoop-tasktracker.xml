@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="11.06.30" time="22.35">
+  <hosts>
+    <host name="Hadoop_TaskTracker">
+      <proxy_hostid>0</proxy_hostid>
+      <useip>1</useip>
+      <dns></dns>
+      <ip>127.0.0.1</ip>
+      <port>10050</port>
+      <status>3</status>
+      <useipmi>0</useipmi>
+      <ipmi_ip>127.0.0.1</ipmi_ip>
+      <ipmi_port>623</ipmi_port>
+      <ipmi_authtype>0</ipmi_authtype>
+      <ipmi_privilege>2</ipmi_privilege>
+      <ipmi_username></ipmi_username>
+      <ipmi_password></ipmi_password>
+      <groups>
+        <group>Templates</group>
+      </groups>
+      <triggers/>
+      <items>
+
+<item type="2" key="jvm.metrics.gcCount[TaskTracker]" value_type="0">
+<description>jvm.metrics.gcCount[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.gcTimeMillis[TaskTracker]" value_type="0">
+<description>jvm.metrics.gcTimeMillis[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logError[TaskTracker]" value_type="0">
+<description>jvm.metrics.logError[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logFatal[TaskTracker]" value_type="0">
+<description>jvm.metrics.logFatal[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logInfo[TaskTracker]" value_type="0">
+<description>jvm.metrics.logInfo[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logWarn[TaskTracker]" value_type="0">
+<description>jvm.metrics.logWarn[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.maxMemoryM[TaskTracker]" value_type="0">
+<description>jvm.metrics.maxMemoryM[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapCommittedM[TaskTracker]" value_type="0">
+<description>jvm.metrics.memHeapCommittedM[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapUsedM[TaskTracker]" value_type="0">
+<description>jvm.metrics.memHeapUsedM[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapCommittedM[TaskTracker]" value_type="0">
+<description>jvm.metrics.memNonHeapCommittedM[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapUsedM[TaskTracker]" value_type="0">
+<description>jvm.metrics.memNonHeapUsedM[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsBlocked[TaskTracker]" value_type="0">
+<description>jvm.metrics.threadsBlocked[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsNew[TaskTracker]" value_type="0">
+<description>jvm.metrics.threadsNew[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsRunnable[TaskTracker]" value_type="0">
+<description>jvm.metrics.threadsRunnable[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTerminated[TaskTracker]" value_type="0">
+<description>jvm.metrics.threadsTerminated[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTimedWaiting[TaskTracker]" value_type="0">
+<description>jvm.metrics.threadsTimedWaiting[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsWaiting[TaskTracker]" value_type="0">
+<description>jvm.metrics.threadsWaiting[TaskTracker]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.shuffleOutput.shuffle_failed_outputs" value_type="0">
+<description>mapred.shuffleOutput.shuffle_failed_outputs</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.shuffleOutput.shuffle_handler_busy_percent" value_type="0">
+<description>mapred.shuffleOutput.shuffle_handler_busy_percent</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.shuffleOutput.shuffle_output_bytes" value_type="0">
+<description>mapred.shuffleOutput.shuffle_output_bytes</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.shuffleOutput.shuffle_success_outputs" value_type="0">
+<description>mapred.shuffleOutput.shuffle_success_outputs</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.tasktracker.mapTaskSlots" value_type="0">
+<description>mapred.tasktracker.mapTaskSlots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.tasktracker.maps_running" value_type="0">
+<description>mapred.tasktracker.maps_running</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.tasktracker.reduceTaskSlots" value_type="0">
+<description>mapred.tasktracker.reduceTaskSlots</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.tasktracker.reduces_running" value_type="0">
+<description>mapred.tasktracker.reduces_running</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.tasktracker.tasks_completed" value_type="0">
+<description>mapred.tasktracker.tasks_completed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.tasktracker.tasks_failed_ping" value_type="0">
+<description>mapred.tasktracker.tasks_failed_ping</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="2" key="mapred.tasktracker.tasks_failed_timeout" value_type="0">
+<description>mapred.tasktracker.tasks_failed_timeout</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopTaskTracker</application>
+</applications>
+</item>
+<item type="10" key="get_hadoop_metrics.sh[{$TASKTRACKER.PORT} TaskTracker]" value_type="1">
+          <description>Hadoopメトリクス取得結果</description>
+          <ipmi_sensor></ipmi_sensor>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <status>0</status>
+          <data_type>0</data_type>
+          <applications>
+            <application>HadoopTaskTracker</application>
+          </applications>
+        </item>
+</items>
+      <templates/>
+      <graphs/>
+      <macros>
+        <macro>
+          <value>50060</value>
+          <name>{$TASKTRACKER.PORT}</name>
+        </macro>
+      </macros>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>

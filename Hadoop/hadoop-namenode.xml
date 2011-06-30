@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="11.06.30" time="22.35">
+  <hosts>
+    <host name="Hadoop_Namenode">
+      <proxy_hostid>0</proxy_hostid>
+      <useip>1</useip>
+      <dns></dns>
+      <ip>127.0.0.1</ip>
+      <port>10050</port>
+      <status>3</status>
+      <useipmi>0</useipmi>
+      <ipmi_ip>127.0.0.1</ipmi_ip>
+      <ipmi_port>623</ipmi_port>
+      <ipmi_authtype>0</ipmi_authtype>
+      <ipmi_privilege>2</ipmi_privilege>
+      <ipmi_username></ipmi_username>
+      <ipmi_password></ipmi_password>
+      <groups>
+        <group>Templates</group>
+      </groups>
+      <triggers/>
+      <items>
+
+<item type="2" key="dfs.FSDirectory.files_deleted" value_type="0">
+<description>dfs.FSDirectory.files_deleted</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.BlockCapacity" value_type="0">
+<description>dfs.FSNamesystem.BlockCapacity</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.BlocksTotal" value_type="0">
+<description>dfs.FSNamesystem.BlocksTotal</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.CapacityRemainingGB" value_type="0">
+<description>dfs.FSNamesystem.CapacityRemainingGB</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.CapacityTotalGB" value_type="0">
+<description>dfs.FSNamesystem.CapacityTotalGB</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.CapacityUsedGB" value_type="0">
+<description>dfs.FSNamesystem.CapacityUsedGB</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.CorruptBlocks" value_type="0">
+<description>dfs.FSNamesystem.CorruptBlocks</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.ExcessBlocks" value_type="0">
+<description>dfs.FSNamesystem.ExcessBlocks</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.FilesTotal" value_type="0">
+<description>dfs.FSNamesystem.FilesTotal</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.MissingBlocks" value_type="0">
+<description>dfs.FSNamesystem.MissingBlocks</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.PendingDeletionBlocks" value_type="0">
+<description>dfs.FSNamesystem.PendingDeletionBlocks</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.PendingReplicationBlocks" value_type="0">
+<description>dfs.FSNamesystem.PendingReplicationBlocks</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.ScheduledReplicationBlocks" value_type="0">
+<description>dfs.FSNamesystem.ScheduledReplicationBlocks</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.TotalLoad" value_type="0">
+<description>dfs.FSNamesystem.TotalLoad</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.FSNamesystem.UnderReplicatedBlocks" value_type="0">
+<description>dfs.FSNamesystem.UnderReplicatedBlocks</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.AddBlockOps" value_type="0">
+<description>dfs.namenode.AddBlockOps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.CreateFileOps" value_type="0">
+<description>dfs.namenode.CreateFileOps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.DeleteFileOps" value_type="0">
+<description>dfs.namenode.DeleteFileOps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.FileInfoOps" value_type="0">
+<description>dfs.namenode.FileInfoOps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.FilesAppended" value_type="0">
+<description>dfs.namenode.FilesAppended</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.FilesCreated" value_type="0">
+<description>dfs.namenode.FilesCreated</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.FilesInGetListingOps" value_type="0">
+<description>dfs.namenode.FilesInGetListingOps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.FilesRenamed" value_type="0">
+<description>dfs.namenode.FilesRenamed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.GetBlockLocations" value_type="0">
+<description>dfs.namenode.GetBlockLocations</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.GetListingOps" value_type="0">
+<description>dfs.namenode.GetListingOps</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.JournalTransactionsBatchedInSync" value_type="0">
+<description>dfs.namenode.JournalTransactionsBatchedInSync</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.SafemodeTime" value_type="0">
+<description>dfs.namenode.SafemodeTime</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.Syncs_avg_time" value_type="0">
+<description>dfs.namenode.Syncs_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.Syncs_num_ops" value_type="0">
+<description>dfs.namenode.Syncs_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.Transactions_avg_time" value_type="0">
+<description>dfs.namenode.Transactions_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.Transactions_num_ops" value_type="0">
+<description>dfs.namenode.Transactions_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.blockReport_avg_time" value_type="0">
+<description>dfs.namenode.blockReport_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.blockReport_num_ops" value_type="0">
+<description>dfs.namenode.blockReport_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="dfs.namenode.fsImageLoadTime" value_type="0">
+<description>dfs.namenode.fsImageLoadTime</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.gcCount[Namenode]" value_type="0">
+<description>jvm.metrics.gcCount[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.gcTimeMillis[Namenode]" value_type="0">
+<description>jvm.metrics.gcTimeMillis[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logError[Namenode]" value_type="0">
+<description>jvm.metrics.logError[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logFatal[Namenode]" value_type="0">
+<description>jvm.metrics.logFatal[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logInfo[Namenode]" value_type="0">
+<description>jvm.metrics.logInfo[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logWarn[Namenode]" value_type="0">
+<description>jvm.metrics.logWarn[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.maxMemoryM[Namenode]" value_type="0">
+<description>jvm.metrics.maxMemoryM[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapCommittedM[Namenode]" value_type="0">
+<description>jvm.metrics.memHeapCommittedM[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapUsedM[Namenode]" value_type="0">
+<description>jvm.metrics.memHeapUsedM[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapCommittedM[Namenode]" value_type="0">
+<description>jvm.metrics.memNonHeapCommittedM[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapUsedM[Namenode]" value_type="0">
+<description>jvm.metrics.memNonHeapUsedM[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsBlocked[Namenode]" value_type="0">
+<description>jvm.metrics.threadsBlocked[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsNew[Namenode]" value_type="0">
+<description>jvm.metrics.threadsNew[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsRunnable[Namenode]" value_type="0">
+<description>jvm.metrics.threadsRunnable[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTerminated[Namenode]" value_type="0">
+<description>jvm.metrics.threadsTerminated[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTimedWaiting[Namenode]" value_type="0">
+<description>jvm.metrics.threadsTimedWaiting[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsWaiting[Namenode]" value_type="0">
+<description>jvm.metrics.threadsWaiting[Namenode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopNamenode</application>
+</applications>
+</item>
+<item type="10" key="get_hadoop_metrics.sh[{$NAMENODE.PORT} Namenode]" value_type="1">
+          <description>Hadoopメトリクス取得結果</description>
+          <ipmi_sensor></ipmi_sensor>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <status>0</status>
+          <data_type>0</data_type>
+          <applications>
+            <application>HadoopNamenode</application>
+          </applications>
+        </item>
+</items>
+      <templates/>
+      <graphs/>
+      <macros>
+        <macro>
+          <value>50070</value>
+          <name>{$NAMENODE.PORT}</name>
+        </macro>
+      </macros>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>

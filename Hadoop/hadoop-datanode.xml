@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="11.06.30" time="22.35">
+  <hosts>
+    <host name="Hadoop_Datanode">
+      <proxy_hostid>0</proxy_hostid>
+      <useip>1</useip>
+      <dns></dns>
+      <ip>127.0.0.1</ip>
+      <port>10050</port>
+      <status>3</status>
+      <useipmi>0</useipmi>
+      <ipmi_ip>127.0.0.1</ipmi_ip>
+      <ipmi_port>623</ipmi_port>
+      <ipmi_authtype>0</ipmi_authtype>
+      <ipmi_privilege>2</ipmi_privilege>
+      <ipmi_username></ipmi_username>
+      <ipmi_password></ipmi_password>
+      <groups>
+        <group>Templates</group>
+      </groups>
+      <triggers/>
+      <items>
+
+<item type="2" key="dfs.datanode.blockChecksumOp_avg_time" value_type="0">
+<description>dfs.datanode.blockChecksumOp_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blockChecksumOp_num_ops" value_type="0">
+<description>dfs.datanode.blockChecksumOp_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blockReports_avg_time" value_type="0">
+<description>dfs.datanode.blockReports_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blockReports_num_ops" value_type="0">
+<description>dfs.datanode.blockReports_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.block_verification_failures" value_type="0">
+<description>dfs.datanode.block_verification_failures</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blocks_read" value_type="0">
+<description>dfs.datanode.blocks_read</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blocks_removed" value_type="0">
+<description>dfs.datanode.blocks_removed</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blocks_replicated" value_type="0">
+<description>dfs.datanode.blocks_replicated</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blocks_verified" value_type="0">
+<description>dfs.datanode.blocks_verified</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.blocks_written" value_type="0">
+<description>dfs.datanode.blocks_written</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.bytes_read" value_type="0">
+<description>dfs.datanode.bytes_read</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.bytes_written" value_type="0">
+<description>dfs.datanode.bytes_written</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.copyBlockOp_avg_time" value_type="0">
+<description>dfs.datanode.copyBlockOp_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.copyBlockOp_num_ops" value_type="0">
+<description>dfs.datanode.copyBlockOp_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.heartBeats_avg_time" value_type="0">
+<description>dfs.datanode.heartBeats_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.heartBeats_num_ops" value_type="0">
+<description>dfs.datanode.heartBeats_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.readBlockOp_avg_time" value_type="0">
+<description>dfs.datanode.readBlockOp_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.readBlockOp_num_ops" value_type="0">
+<description>dfs.datanode.readBlockOp_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.reads_from_local_client" value_type="0">
+<description>dfs.datanode.reads_from_local_client</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.reads_from_remote_client" value_type="0">
+<description>dfs.datanode.reads_from_remote_client</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.replaceBlockOp_avg_time" value_type="0">
+<description>dfs.datanode.replaceBlockOp_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.replaceBlockOp_num_ops" value_type="0">
+<description>dfs.datanode.replaceBlockOp_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.writeBlockOp_avg_time" value_type="0">
+<description>dfs.datanode.writeBlockOp_avg_time</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.writeBlockOp_num_ops" value_type="0">
+<description>dfs.datanode.writeBlockOp_num_ops</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.writes_from_local_client" value_type="0">
+<description>dfs.datanode.writes_from_local_client</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="dfs.datanode.writes_from_remote_client" value_type="0">
+<description>dfs.datanode.writes_from_remote_client</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.gcCount[Datanode]" value_type="0">
+<description>jvm.metrics.gcCount[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.gcTimeMillis[Datanode]" value_type="0">
+<description>jvm.metrics.gcTimeMillis[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logError[Datanode]" value_type="0">
+<description>jvm.metrics.logError[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logFatal[Datanode]" value_type="0">
+<description>jvm.metrics.logFatal[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logInfo[Datanode]" value_type="0">
+<description>jvm.metrics.logInfo[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.logWarn[Datanode]" value_type="0">
+<description>jvm.metrics.logWarn[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.maxMemoryM[Datanode]" value_type="0">
+<description>jvm.metrics.maxMemoryM[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapCommittedM[Datanode]" value_type="0">
+<description>jvm.metrics.memHeapCommittedM[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memHeapUsedM[Datanode]" value_type="0">
+<description>jvm.metrics.memHeapUsedM[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapCommittedM[Datanode]" value_type="0">
+<description>jvm.metrics.memNonHeapCommittedM[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.memNonHeapUsedM[Datanode]" value_type="0">
+<description>jvm.metrics.memNonHeapUsedM[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsBlocked[Datanode]" value_type="0">
+<description>jvm.metrics.threadsBlocked[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsNew[Datanode]" value_type="0">
+<description>jvm.metrics.threadsNew[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsRunnable[Datanode]" value_type="0">
+<description>jvm.metrics.threadsRunnable[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTerminated[Datanode]" value_type="0">
+<description>jvm.metrics.threadsTerminated[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsTimedWaiting[Datanode]" value_type="0">
+<description>jvm.metrics.threadsTimedWaiting[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="2" key="jvm.metrics.threadsWaiting[Datanode]" value_type="0">
+<description>jvm.metrics.threadsWaiting[Datanode]</description>
+<delay>30</delay>
+<history>90</history>
+<trends>365</trends>
+<applications>
+<application>HadoopDatanode</application>
+</applications>
+</item>
+<item type="10" key="get_hadoop_metrics.sh[{$DATANODE.PORT} Datanode]" value_type="1">
+          <description>Hadoopメトリクス取得結果</description>
+          <ipmi_sensor></ipmi_sensor>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <status>0</status>
+          <data_type>0</data_type>
+          <applications>
+            <application>HadoopDatanode</application>
+          </applications>
+        </item>
+</items>
+      <templates/>
+      <graphs/>
+      <macros>
+        <macro>
+          <value>50075</value>
+          <name>{$DATANODE.PORT}</name>
+        </macro>
+      </macros>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>
